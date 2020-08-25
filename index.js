@@ -36,7 +36,7 @@ client.on("message", async message => {
 
 if(message.content == '!roll')
 var roll =(Math.floor(Math.random()*200)+1);
-   if (roll = 10 )
+   if (roll = 1 )
    {message.reply('10'),
    message.reply('9')
    message.reply('8')
