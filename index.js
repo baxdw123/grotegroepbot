@@ -34,20 +34,46 @@ client.on("message", async message => {
 
     }
 
-if(message.content == '!roll')
-var roll =(Math.floor(Math.random()*200)+1);
-   if (roll = 1 )
-   {('10')
-   ('9')
-   ('8')
-   ('7')
-   ('6')
-   ('5')
-   ('4')
-   ('3')
-   ('2')
-  ('1')
-}
-        else {message.reply('lol!');
+    if (message.content == '!roll') 
+    {
+        var roll =(Math.floor(Math.random()*200)+1);
+        if (roll == 2)
+        {
+            message.reply('Wowza!');
+        }
+        else 
+        {
+            message.reply('4');
+        }
+        {
+            message.reply('3');
+        }
+        {
+            message.reply('lol!');
+        }
+        {
+            message.reply('lol!');
+        }
+        {
+            message.reply('2');
+        }
+        {
+            message.reply('1');
+        }
+        {
+            message.reply('l');
+        }
+        {
+            message.reply('lo');
+        }
+        {
+            message.reply('!');
+        }
+        {
+            message.reply('lol!');
+        }
     }
-});
+}
+
+
+);
