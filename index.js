@@ -4,7 +4,7 @@ const botConfig = require("./botconfig.json");
 const client = new discord.Client();
 client.login(process.env.token);
 
-client.on("ready", async => {
+client.on("ready", () => {
 
 console.log(`${client.user.username} is klaar voor gebruik`);
 client.user.setActivity("Minecraft", {type: "PLAYING"});
@@ -27,53 +27,56 @@ client.on("message", async message => {
  
     var command = messageArray[0];
  
-    if (command === `${prefix}hallo`) {
+    if (command === `${prefix}hulp`) {
  
-        return message.channel.send("Hallo!!");
+        return message.channel.send("dit team probeert de grootste discord server te make (heel europe).en wij Hoopen dat jij ook mee wil helpen om het doel te Halen.");
+
+    }
+
+    if(message.author.bot) return;
+ 
+    if(message.channel.type === "dm") return;
+ 
+    var prefix = botConfig.prefix;
+ 
+    var messageArray = message.content.split(" ");
+ 
+    var command = messageArray[0];
+ 
+    if (command === `${prefix}jullian`) {
+ 
+        return message.channel.send("jullian is de owner van de server");
+
+    }
+
+    if(message.author.bot) return;
+ 
+    if(message.channel.type === "dm") return;
+ 
+    var prefix = botConfig.prefix;
+ 
+    var messageArray = message.content.split(" ");
+ 
+    var command = messageArray[0];
+ 
+    if (command === `${prefix}blockhead`) {
+ 
+        return message.channel.send("https://cdn.discordapp.com/emojis/700299738737672192.png?v=1");
+
+    }
+
+    if (command === "!hallo"){
+
+        const choices = [
+          {
+            message: "hallo"
+          },
+          {
+            message: "hi"
+          },
+          {
+            message: "hoi."
+          }       
+``      ];
     
-
-    }
-
-    if (message.content == '!roll') 
-    {
-        var roll =(Math.floor(Math.random()*200)+1);
-        if (roll == 2)
-        {
-            message.reply('Wowza!');
-        }
-        else 
-        {
-            message.reply('4');
-        }
-        {
-            message.reply('3');
-        }
-        {
-            message.reply('lol!');
-        }
-        {
-            message.reply('lol!');
-        }
-        {
-            message.reply('2');
-        }
-        {
-            message.reply('1');
-        }
-        {
-            message.reply('l');
-        }
-        {
-            message.reply('lo');
-        }
-        {
-            message.reply('!');
-        }
-        {
-            message.reply('lol!');
-        }
-    }
-}
-
-
-);
+}});
