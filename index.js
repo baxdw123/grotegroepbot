@@ -45,7 +45,7 @@ client.on("message", async message => {
  
     if (command === `${prefix}jullian`) {
  
-        return message.channel.send("jullian is de owner van de server");
+        return message.channel.send("jullian is appart");
 
     }
 
@@ -65,18 +65,28 @@ client.on("message", async message => {
 
     }
 
-    if (command === "!hallo"){
+    if(message.author.bot) return;
+ 
+    if(message.channel.type === "dm") return;
+ 
+    var prefix = botConfig.prefix;
+ 
+    var messageArray = message.content.split(" ");
+ 
+    var command = messageArray[0];
+ 
+    if (command === `${prefix}blockhead`) {
+ 
+        return message.channel.send("https://cdn.discordapp.com/emojis/700299738737672192.png?v=1");
 
-        const choices = [
-          {
-            message: "hallo"
-          },
-          {
-            message: "hi"
-          },
-          {
-            message: "hoi."
-          }       
-``      ];
+    }
+
+    let args = massage.content.substring(prefix.length).split(" ");
+
+    switch(args[0]){
+        case 'ping':
+             massage.reply('pong');
+        break;
+    }
     
-}});
+});
