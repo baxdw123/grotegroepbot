@@ -75,7 +75,7 @@ client.on("message", async message => {
  
     var command = messageArray[0];
  
-    if (command === `${prefix}blockhead`) {
+    if (command === `${prefix}hoiiiii`) {
  
         return message.channel.send("hoi", "doei");
 
