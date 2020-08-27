@@ -77,16 +77,9 @@ client.on("message", async message => {
  
     if (command === `${prefix}blockhead`) {
  
-        return message.channel.send("https://cdn.discordapp.com/emojis/700299738737672192.png?v=1");
+        return message.channel.send("hoi", "doei");
 
     }
 
-    let args = massage.content.substring(prefix.length).split(" ");
-
-    switch(args[0]){
-        case 'ping':
-             massage.reply('pong');
-        break;
-    }
     
 });
