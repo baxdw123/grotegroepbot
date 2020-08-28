@@ -29,7 +29,7 @@ client.on("message", async message => {
  
     if (command === `${prefix}hulp`) {
  
-        return message.channel.send("dit team probeert de grootste discord server te make (heel europe).en wij Hoopen dat jij ook mee wil helpen om het doel te Halen.");
+        return message.channel.send("dit team probeert de grootste discord server te maken (heel europe).en wij Hoopen dat jij ook mee wil helpen om het doel te Halen.");
 
     }
 
@@ -75,11 +75,42 @@ client.on("message", async message => {
  
     var command = messageArray[0];
  
-    if (command === `${prefix}hoiiiii`) {
+    if (command === `${prefix}leaderboard`) {
  
-        return message.channel.send("hoi", "doei");
+        return message.channel.send("https://mee6.xyz/leaderboard/699929047190470677");
 
     }
 
+
+    if(message.author.bot) return;
+ 
+    if(message.channel.type === "dm") return;
+ 
+    var prefix = botConfig.prefix;
+ 
+    var messageArray = message.content.split(" ");
+ 
+    var command = messageArray[0];
+ 
+    if (command === `${prefix}levels`) {
+ 
+        return message.channel.send("https://mee6.xyz/leaderboard/699929047190470677");
+
+    }
     
+    if(message.author.bot) return;
+ 
+    if(message.channel.type === "dm") return;
+ 
+    var prefix = botConfig.prefix;
+ 
+    var messageArray = message.content.split(" ");
+ 
+    var command = messageArray[0];
+ 
+    if (command === `${prefix}sterk`) {
+ 
+        return message.channel.send("https://cdn.discordapp.com/attachments/729347667674529865/730041854216765500/unknown.png");
+
+    }
 });
