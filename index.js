@@ -113,4 +113,21 @@ client.on("message", async message => {
         return message.channel.send("https://cdn.discordapp.com/attachments/729347667674529865/730041854216765500/unknown.png");
 
     }
+    
+
+    if(message.author.bot) return;
+ 
+    if(message.channel.type === "dm") return;
+ 
+    var prefix = botConfig.prefix;
+ 
+    var messageArray = message.content.split(" ");
+ 
+    var command = messageArray[0];
+ 
+    if (command === `${prefix}cool`) {
+ 
+        return message.channel.send("jij ben niet cool maar baxdw123 en cooleman wel");
+
+    }
 });
