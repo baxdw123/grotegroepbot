@@ -80,23 +80,6 @@ client.on("message", async message => {
         return message.channel.send("https://mee6.xyz/leaderboard/699929047190470677");
 
     }
-
-
-    if(message.author.bot) return;
- 
-    if(message.channel.type === "dm") return;
- 
-    var prefix = botConfig.prefix;
- 
-    var messageArray = message.content.split(" ");
- 
-    var command = messageArray[0];
- 
-    if (command === `${prefix}levels`) {
- 
-        return message.channel.send("https://mee6.xyz/leaderboard/699929047190470677");
-
-    }
     
     if(message.author.bot) return;
  
@@ -143,6 +126,21 @@ client.on("message", async message => {
     if (command === `family`) {
  
         return message.channel.send("dom toretto");
+
+    }
+    if(message.author.bot) return;
+ 
+    if(message.channel.type === "dm") return;
+ 
+    var prefix = botConfig.prefix;
+ 
+    var messageArray = message.content.split(" ");
+ 
+    var command = messageArray[0];
+ 
+    if (command === `klopt`) {
+ 
+        return message.channel.send("ik was het daar ook mee eens");
 
     }
 });
