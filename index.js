@@ -7,7 +7,7 @@ client.login(process.env.token);
 client.on("ready", () => {
 
 console.log(`${client.user.username} is klaar voor gebruik`);
-client.user.setActivity("Fortnite", {type: "PLAYING"});
+client.user.setActivity("MInecraft", {type: "PLAYING"});
 
 
 });
@@ -128,6 +128,21 @@ client.on("message", async message => {
     if (command === `${prefix}cool`) {
  
         return message.channel.send("jij ben niet cool maar baxdw123 en cooleman wel");
+
+    }
+    if(message.author.bot) return;
+ 
+    if(message.channel.type === "dm") return;
+ 
+    var prefix = botConfig.prefix;
+ 
+    var messageArray = message.content.split(" ");
+ 
+    var command = messageArray[0];
+ 
+    if (command === `family`) {
+ 
+        return message.channel.send("dom toretto");
 
     }
 });
