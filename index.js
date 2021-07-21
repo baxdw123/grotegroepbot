@@ -7,7 +7,7 @@ client.login(process.env.token);
 client.on("ready", () => {
 
 console.log(`${client.user.username} is klaar voor gebruik`);
-client.user.setActivity("MInecraft", {type: "PLAYING"});
+client.user.setActivity("Minecraft", {type: "PLAYING"});
 
 
 });
