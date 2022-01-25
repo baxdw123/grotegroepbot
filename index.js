@@ -1,5 +1,6 @@
 const discord = require("discord.js");
 const botConfig = require("./botconfig.json");
+const Swearwords = require("./Data/scheldworden.json");
 
 const client = new discord.Client();
 client.login(process.env.token);
@@ -11,6 +12,7 @@ client.user.setActivity("Minecraft", {type: "PLAYING"});
 
 
 });
+
 
 
 
@@ -28,10 +30,24 @@ client.on("message", async message => {
     var command = messageArray[0];
  
     if (command === `${prefix}hulp`) {
- 
-        return message.channel.send("dit team probeert de grootste discord server te maken (heel europe).en wij Hoopen dat jij ook mee wil helpen om het doel te Halen.");
+
+var msg = message.content.toLowerCase();
+
+for (let index = 0; index < Swearwords.length; index++) {
+    const swearWord = Swearwords[index];
+    
+    if(msg.includes(swearWord.toLowerCase())){
+
+        message.delete();
+        return message.channel.send("Baxdw123: je mag niet schelden idioot")
+    }
+}
 
     }
+
+
+
+
 
     if(message.author.bot) return;
  
@@ -160,9 +176,9 @@ client.on("message", async message => {
 
     }
     client.on('message', message => {
-        if (message.content === '+ping') {  
-          message.channel.send(`🏓Latency is ${Date.now() - message.createdTimestamp}ms. API Latency is ${Math.round(client.ws.ping)}ms`);
-        }
-      });
+        if (message.content === '!ping') {  
+          message.channel.send(`pong ${Math.round(client.ws.ping)}ms`);
+        }});
+
  
 });
