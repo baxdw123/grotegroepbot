@@ -29,7 +29,7 @@ client.on("message", async message => {
  
     var command = messageArray[0];
  
-    if (command === `${prefix}hulp`) {
+    if (!message.content.startsWith(prefix)) {
 
 var msg = message.content.toLowerCase();
 
