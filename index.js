@@ -180,5 +180,15 @@ for (let index = 0; index < Swearwords.length; index++) {
           message.channel.send(`pong ${Math.round(client.ws.ping)}ms`);
         }});
 
+        client.on('message', message => {
+            if (message.content === 'ik ben cool') {  
+            message.delete();
+            return await message.channel.send("ben je niet");
+            setTimeout(() => {
+                message.delete()
+            }, 3000);
+            }});
+    
+
  
 });
