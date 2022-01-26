@@ -183,7 +183,7 @@ for (let index = 0; index < Swearwords.length; index++) {
         client.on('message', message => {
             if (message.content === 'ik ben cool') {  
             message.delete();
-            return await message.channel.send("ben je niet").then(msg =>{
+            return message.channel.send("ben je niet").then(msg =>{
                 setTimeout(() => {
                     message.delete()
                 }, 5000);
